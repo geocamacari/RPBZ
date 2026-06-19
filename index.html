@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatório de Parâmetros Básicos por Zona - RPBZ</title>
+    <title>Camaçari - RPBZ</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -94,15 +94,15 @@
         
         <!-- CABEÇALHO -->
         <header class="bg-purple-200 p-4 rounded-xl shadow border-b-2 border-violet-600 text-center">
-            <h1 class="text-xl sm:text-2xl font-extrabold text-violet-900 uppercase tracking-wide">Relatório de Parâmetros Básicos por Zona</h1>
-            <p class="text-sm font-bold text-fuchsia-900 mt-1">Ferramenta de apoio desenvolvida pela Coordenadoria de Planejamento e Projetos – (CPP) / SEDUR (PMC) - 2026</p>
+            <h1 class="text-xl sm:text-2xl font-extrabold text-violet-900 uppercase tracking-wide">Relatório de Parâmetros Básicos por Zona - RPBZ</h1>
+            <p class="text-sm font-bold text-fuchsia-900 mt-1">Ferramenta de apoio desenvolvida pela Coordenadoria de Planejamento e Projetos – (CPP) / SEDUR (Camaçari) - 2026</p>
             <p class="text-xs font-semibold text-purple-800 mt-1">Identifique o Zoneamento Urbanístico básico incidente na área de seu interesse para simples verificação prévia. Não possui valor legal.</p>
         </header>
 
         <!-- SEÇÃO 1: MAPA -->
         <section class="bg-fuchsia-100 p-4 rounded-xl shadow border border-fuchsia-300 relative">
-            <h2 class="text-base sm:text-lg font-bold text-fuchsia-800 mb-2 border-b border-fuchsia-300 pb-1"><i class="fa-solid fa-map-location-dot mr-1"></i> 1. Verifique sua Zona no Mapa</h2>
-            <p class="text-xs font-semibold text-fuchsia-900 mb-3">Navegue diretamente ou tente buscar endereços. Ative/Desative as camadas temáticas no menu superior direito do mapa.</p>
+            <h2 class="text-base sm:text-lg font-bold text-fuchsia-800 mb-2 border-b border-fuchsia-300 pb-1"><i class="fa-solid fa-map-location-dot mr-1"></i> 1. Verifique a área de interesse no Mapa e a Zona incidente</h2>
+            <p class="text-xs font-semibold text-fuchsia-900 mb-3">Navegue diretamente sobre a imagem de satélite (ou tente buscar endereços). Ative/Desative as camadas temáticas no menu superior direito do mapa.</p>
             
             <div id="map-container">
                 <!-- Overlay de carregamento das camadas web -->
@@ -240,7 +240,7 @@
                 '<span class="font-bold text-xs text-purple-900">OpenTopoMap (OSM)</span>': L.tileLayer.provider('OpenTopoMap')
             };
 
-            layerControl = L.control.layers(baseLayers, {}, { collapsed: false }).addTo(map);
+            layerControl = L.control.layers(baseLayers, {}, { collapsed: true }).addTo(map);
             L.control.scale({ imperial: false, metric: true }).addTo(map);
             
             map.addControl(new window.GeoSearch.GeoSearchControl({ provider: new window.GeoSearch.OpenStreetMapProvider(), style: 'bar', autoClose: true, searchLabel: 'Buscar endereço...' }));
