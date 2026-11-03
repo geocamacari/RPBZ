@@ -311,7 +311,7 @@
                     centerMap: true
                 },
                 {
-                    name: "Macroáreas", // Adicionado do escopo anterior (desativado por padrão)
+                    name: "Macroáreas",
                     url: "https://raw.githubusercontent.com/geocamacari/relatorios_SIS-SEDUR_12-meses/main/Macroareas.geojson",
                     color: "#00fc5d", // Verde
                     activeByDefault: false,
@@ -323,6 +323,13 @@
                     color: "#fc00e3", // Rosa
                     activeByDefault: true, // Centraliza e ativa
                     centerMap: true
+                },
+                {
+                    name: "Centralidades Lineares (CeLin)",
+                    url: "https://raw.githubusercontent.com/geocamacari/relatorios_SIS-SEDUR_12-meses/main/CeLin.geojson",
+                    color: "#0284c7", // Azul royal destacado
+                    activeByDefault: false,
+                    centerMap: false
                 },
                 {
                     name: "Macrozona Industrial",
@@ -338,7 +345,6 @@
                     activeByDefault: false,
                     centerMap: false
                 }
-                          
             ];
 
             let loadedCount = 0;
